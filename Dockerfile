@@ -32,8 +32,8 @@ WORKDIR /opt/playmaker
 RUN pip3 install . && \
     cd /opt && rm -rf playmaker
 
-RUN groupadd -g 999 pmuser && \
-    useradd -m -u 999 -g pmuser pmuser
+RUN groupadd -g 987 pmuser && \
+    useradd -m -u 987 -g pmuser pmuser
 RUN chown -R pmuser:pmuser /data/fdroid && \
     chown -R pmuser:pmuser /opt/playmaker
 USER pmuser
